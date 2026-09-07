@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kshitij Shah — Software Engineer & Problem Solver</title>
+  <meta name="description" content="Personal portfolio of Kshitij Shah — Full-Stack Software Engineer, AI/RAG Builder, and Algorithmic Problem Solver (400+ LeetCode DSA).">
+
+  <!-- Google Fonts: Great Vibes (Signature), Playfair Display (Hollow/Editorial Serif), Plus Jakarta Sans / Inter (Body & Meta), Fira Code (Mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+
+  <!-- Atmospheric Vignette & Organic Watermark Branch Silhouettes -->
+  <div class="ambient-glow-top"></div>
+  <div class="ambient-glow-bottom"></div>
+
+  <!-- Decorative Botanical Line-Art SVG Watermarks (Steve Hoang Motif) -->
+  <div class="watermark watermark-top-left" aria-hidden="true">
+    <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10,190 Q60,120 40,50 Q70,90 120,40 Q100,100 170,90 Q120,130 190,170" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      <path d="M40,50 Q30,20 15,10" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+      <path d="M120,40 Q140,20 170,15" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+      <path d="M60,120 Q100,110 130,130" stroke="currentColor" stroke-width="0.8" stroke-linecap="round"/>
+      <circle cx="15" cy="10" r="3" fill="currentColor" opacity="0.6"/>
+      <circle cx="170" cy="15" r="3" fill="currentColor" opacity="0.6"/>
+      <circle cx="190" cy="170" r="2.5" fill="currentColor" opacity="0.6"/>
+    </svg>
+  </div>
+  
+  <div class="watermark watermark-top-right" aria-hidden="true">
+    <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M190,190 Q140,120 160,50 Q130,90 80,40 Q100,100 30,90 Q80,130 10,170" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      <path d="M160,50 Q170,20 185,10" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+      <path d="M80,40 Q60,20 30,15" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="185" cy="10" r="3" fill="currentColor" opacity="0.6"/>
+      <circle cx="30" cy="15" r="3" fill="currentColor" opacity="0.6"/>
+      <circle cx="10" cy="170" r="2.5" fill="currentColor" opacity="0.6"/>
+    </svg>
+  </div>
+
+  <!-- TOP UTILITY BAR -->
+  <header class="top-nav-bar">
+    <div class="nav-container">
+      
+      <!-- Minimalist Breadcrumb / Current Context -->
+      <a href="#hero" class="nav-brand-minimal">
+        <span class="brand-monogram">KS</span>
+        <span class="brand-dot">•</span>
+        <span class="brand-location">Pune, IN</span>
+      </a>
+
+      <!-- Right Utility Controls -->
+      <div class="nav-right-controls">
+        <!-- Minimal Search Pill -->
+        <div class="search-pill-box">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="site-search" placeholder="search projects, tags..." aria-label="Search projects">
+          <button id="clear-search" class="clear-search-btn" title="Clear search" style="display: none;">×</button>
+        </div>
+
+        <span class="control-dot-sep">•</span>
+
+        <!-- Direct Links -->
+        <div class="nav-quick-links">
+          <a href="#projects" class="quick-link">work</a>
+          <a href="#about" class="quick-link">about</a>
+          <a href="#contact" class="quick-link">contact</a>
+        </div>
+
+        <span class="control-dot-sep">•</span>
+
+        <!-- Theme Mode Toggle -->
+        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle theme">
+          <i class="fa-regular fa-moon" id="theme-icon"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN EDITORIAL CONTAINER -->
+  <div class="editorial-wrapper">
+
+    <!-- HERO PROFILE HEADER (Steve Hoang Style) -->
+    <header id="hero" class="hero-editorial-header">
+      
+      <!-- Profile Avatar -->
+      <div class="avatar-frame-wrap">
+        <div class="avatar-offset-card"></div>
+        <div class="avatar-circle">
+          <!-- Monogram avatar / initials -->
+          <div class="avatar-monogram">KS</div>
+        </div>
+      </div>
+
+      <!-- Signature Brand Logo -->
+      <h1 class="hero-signature-name">
+        <a href="#hero">Kshitij Shah</a>
+      </h1>
+
+      <!-- Editorial Quote / Tagline with Interactive Highlight Links -->
+      <p class="hero-tagline-quote">
+        Building <a href="#projects" class="tagline-link" data-filter="systems">scalable backends</a>, architecting <a href="#projects" class="tagline-link" data-filter="ai">intelligent RAG AI</a>, and solving <a href="#projects" class="tagline-link" data-filter="dsa">complex algorithms</a>.
+      </p>
+
+      <!-- Quick Metrics Strip -->
+      <div class="hero-submeta-row">
+        <span class="submeta-item"><i class="fa-solid fa-code"></i> 400+ LeetCode DSA</span>
+        <span class="submeta-sep">/</span>
+        <span class="submeta-item"><i class="fa-solid fa-graduation-cap"></i> B.Tech CSE @ SIT Pune</span>
+        <span class="submeta-sep">/</span>
+        <span class="submeta-item"><i class="fa-solid fa-location-dot"></i> Pune, India</span>
+      </div>
+
+      <!-- Social Icon Links -->
+      <div class="hero-social-links">
+        <a href="https://github.com/kshitiz-shah" target="_blank" rel="noopener" title="GitHub" class="hero-social-icon">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/kshitij-shah-83780125a" target="_blank" rel="noopener" title="LinkedIn" class="hero-social-icon">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://leetcode.com/u/shahkshitiz9865" target="_blank" rel="noopener" title="LeetCode Profile" class="hero-social-icon">
+          <i class="fa-solid fa-laptop-code"></i>
+        </a>
+        <a href="mailto:shahkshtitiz9865@gmail.com" title="Direct Email" class="hero-social-icon">
+          <i class="fa-regular fa-envelope"></i>
+        </a>
+      </div>
+
+    </header>
+
+    <!-- CATEGORY FILTER PILLS -->
+    <nav class="category-filter-bar" aria-label="Project category filter">
+      <button class="filter-pill active" data-filter="all">All Entries</button>
+      <button class="filter-pill" data-filter="ai">AI & RAG</button>
+      <button class="filter-pill" data-filter="fullstack">Full-Stack</button>
+      <button class="filter-pill" data-filter="systems">Backend & Systems</button>
+      <button class="filter-pill" data-filter="dsa">Algorithms (400+ DSA)</button>
+      <button class="filter-pill" data-filter="vision">Computer Vision</button>
+    </nav>
+
+    <!-- SEARCH STATUS MESSAGE (Hidden by default) -->
+    <div id="search-status-bar" class="search-status-bar" style="display: none;">
+      <span id="search-status-text">Showing results for ""</span>
+      <button id="reset-filter-btn" class="reset-filter-btn">Reset filter</button>
+    </div>
+
+    <!-- MAIN EDITORIAL POST & PROJECT STREAM -->
+    <main id="projects" class="editorial-post-stream">
+
+      <!-- ==========================================
+           POST / CARD 1: DocuMind (Text Left, Visual Right)
+           ========================================== -->
+      <article class="editorial-card pattern-a" data-category="ai fullstack" data-tags="ai-rag langchain pinecone qdrant vector-db semantic-search react nodejs express">
+        
+        <!-- Left Column: Content -->
+        <div class="card-column-content">
+          <div class="card-entry-number">01 / FEATURED</div>
+          
+          <h2 class="card-hollow-title">
+            <a href="https://github.com/kshitiz-shah/RAG_AI" target="_blank" rel="noopener">DocuMind — RAG AI Document Intelligence Engine</a>
+          </h2>
+
+          <p class="card-excerpt">
+            An end-to-end full-stack AI platform enabling users to upload dense multi-page documents (50+ pages) and execute grounded semantic question-answering with zero hallucination and citation attribution.
+          </p>
+
+          <p class="card-details">
+            Engineered an automated chunking pipeline (500 tokens with overlap) feeding Pinecone/Qdrant vector stores, maintaining semantic context fidelity and sub-3s query latency across distributed knowledge bases.
+          </p>
+
+          <!-- Standardized Bottom Metadata Row -->
+          <div class="card-meta-row">
+            <div class="meta-date">
+              <i class="fa-regular fa-calendar"></i>
+              <time datetime="2025-08-15">August 2025</time>
+            </div>
+            <div class="meta-tags">
+              <i class="fa-solid fa-tag"></i>
+              <span class="tag-label">ai-rag, langchain, vector-db, semantic-search, react</span>
+            </div>
+          </div>
+
+          <div class="card-action-links">
+            <a href="https://github.com/kshitiz-shah/RAG_AI" target="_blank" rel="noopener" class="card-action-btn">
+              <i class="fa-brands fa-github"></i> Source Code ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Visual Preview with Offset Paper Shadow Layer -->
+        <div class="card-column-visual">
+          <div class="visual-offset-backdrop"></div>
+          <div class="visual-card-frame">
+            <div class="mock-terminal">
+              <div class="terminal-bar">
+                <span class="t-dot t-red"></span>
+                <span class="t-dot t-yellow"></span>
+                <span class="t-dot t-green"></span>
+                <span class="t-title">rag_pipeline.py</span>
+              </div>
+              <pre class="terminal-code"><code><span class="k">from</span> langchain.vectorstores <span class="k">import</span> Pinecone
+<span class="k">from</span> langchain.chains <span class="k">import</span> RetrievalQA
+
+<span class="c"># Semantic RAG Query Engine</span>
+vectorstore = Pinecone.from_documents(
+    docs, embeddings, index_name=<span class="s">"documind"</span>
+)
+retriever = vectorstore.as_retriever(
+    search_type=<span class="s">"similarity"</span>, 
+    search_kwargs={<span class="s">"k"</span>: 4}
+)
+qa_chain = RetrievalQA.from_chain_type(
+    llm=chat_model,
+    retriever=retriever,
+    return_source_documents=<span class="b">True</span>
+)</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </article>
+
+
+      <!-- ==========================================
+           POST / CARD 2: ISKCON Community Platform (Visual Left, Text Right)
+           ========================================== -->
+      <article class="editorial-card pattern-b" data-category="fullstack systems" data-tags="typescript react postgresql prisma rbac n8n-automation express">
+        
+        <!-- Left Column: Visual Preview with Offset Paper Shadow Layer -->
+        <div class="card-column-visual">
+          <div class="visual-offset-backdrop"></div>
+          <div class="visual-card-frame">
+            <div class="mock-terminal">
+              <div class="terminal-bar">
+                <span class="t-dot t-red"></span>
+                <span class="t-dot t-yellow"></span>
+                <span class="t-dot t-green"></span>
+                <span class="t-title">schema.prisma</span>
+              </div>
+              <pre class="terminal-code"><code><span class="k">model</span> <span class="t">User</span> {
+  id        <span class="t">String</span>   @id @default(uuid())
+  email     <span class="t">String</span>   @unique
+  role      <span class="t">Role</span>     @default(MEMBER)
+  events    <span class="t">Event[]</span>
+  donations <span class="t">Donation[]</span>
+}
+
+<span class="k">model</span> <span class="t">Event</span> {
+  id        <span class="t">String</span>   @id @default(uuid())
+  title     <span class="t">String</span>
+  date      <span class="t">DateTime</span>
+  capacity  <span class="t">Int</span>
+}</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Content -->
+        <div class="card-column-content">
+          <div class="card-entry-number">02 / PLATFORM</div>
+
+          <h2 class="card-hollow-title">
+            <a href="https://github.com/kshitiz-shah/ISCKON_WEBSITE" target="_blank" rel="noopener">Community & Event Management Platform</a>
+          </h2>
+
+          <p class="card-excerpt">
+            A full-featured, scalable community web ecosystem supporting schedule management, donation accounting, automated inquiry workflows, and administrative operations.
+          </p>
+
+          <p class="card-details">
+            Architected type-safe relational schemas using <strong>PostgreSQL</strong> and <strong>Prisma ORM</strong> with Role-Based Access Control (RBAC). Integrated <strong>n8n workflow automations</strong> for notification routing, reducing manual overhead by 70%.
+          </p>
+
+          <!-- Standardized Bottom Metadata Row -->
+          <div class="card-meta-row">
+            <div class="meta-date">
+              <i class="fa-regular fa-calendar"></i>
+              <time datetime="2026-01-20">January 2026</time>
+            </div>
+            <div class="meta-tags">
+              <i class="fa-solid fa-tag"></i>
+              <span class="tag-label">fullstack, typescript, postgresql, prisma, rbac, n8n</span>
+            </div>
+          </div>
+
+          <div class="card-action-links">
+            <a href="https://github.com/kshitiz-shah/ISCKON_WEBSITE" target="_blank" rel="noopener" class="card-action-btn">
+              <i class="fa-brands fa-github"></i> Source Code ↗
+            </a>
+          </div>
+        </div>
+
+      </article>
+
+
+      <!-- ==========================================
+           POST / CARD 3: Scalable URL Shortener (Text Left, Visual Right)
+           ========================================== -->
+      <article class="editorial-card pattern-a" data-category="systems" data-tags="backend redis mongodb microservices jwt nodejs express performance">
+        
+        <!-- Left Column: Content -->
+        <div class="card-column-content">
+          <div class="card-entry-number">03 / DISTRIBUTED SYSTEMS</div>
+
+          <h2 class="card-hollow-title">
+            <a href="https://github.com/kshitiz-shah/URL_SHORTNER" target="_blank" rel="noopener">Scalable URL Shortener & Analytics Gateway</a>
+          </h2>
+
+          <p class="card-excerpt">
+            A high-concurrency URL shortening microservice engineered for low-latency redirection, real-time analytics telemetry, and custom alias management.
+          </p>
+
+          <p class="card-details">
+            Structured strictly around the <strong>Routes-Controllers-Services-DAO</strong> pattern. Leveraged <strong>Redis in-memory caching</strong> for high-frequency slug lookups to deliver sub-10ms response times with JWT authentication and rate limiting.
+          </p>
+
+          <!-- Standardized Bottom Metadata Row -->
+          <div class="card-meta-row">
+            <div class="meta-date">
+              <i class="fa-regular fa-calendar"></i>
+              <time datetime="2026-06-10">June 2026</time>
+            </div>
+            <div class="meta-tags">
+              <i class="fa-solid fa-tag"></i>
+              <span class="tag-label">systems, redis-cache, mongodb, jwt, microservice, express</span>
+            </div>
+          </div>
+
+          <div class="card-action-links">
+            <a href="https://github.com/kshitiz-shah/URL_SHORTNER" target="_blank" rel="noopener" class="card-action-btn">
+              <i class="fa-brands fa-github"></i> Source Code ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Visual Preview with Offset Paper Shadow Layer -->
+        <div class="card-column-visual">
+          <div class="visual-offset-backdrop"></div>
+          <div class="visual-card-frame">
+            <div class="mock-terminal">
+              <div class="terminal-bar">
+                <span class="t-dot t-red"></span>
+                <span class="t-dot t-yellow"></span>
+                <span class="t-dot t-green"></span>
+                <span class="t-title">url.service.ts</span>
+              </div>
+              <pre class="terminal-code"><code><span class="c">// Sub-10ms Cached Redirection</span>
+<span class="k">export async function</span> <span class="t">resolveShortUrl</span>(code) {
+  <span class="k">const</span> cached = <span class="k">await</span> redis.get(<span class="s">`slug:${code}`</span>);
+  <span class="k">if</span> (cached) {
+    analyticsQueue.push({ code, timestamp: Date.now() });
+    <span class="k">return</span> JSON.parse(cached);
+  }
+  <span class="k">const</span> record = <span class="k">await</span> UrlDAO.findByCode(code);
+  <span class="k">await</span> redis.setex(<span class="s">`slug:${code}`</span>, 3600, record.url);
+  <span class="k">return</span> record.url;
+}</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </article>
+
+
+      <!-- ==========================================
+           POST / CARD 4: Algorithmic DSA (Visual Left, Text Right)
+           ========================================== -->
+      <article class="editorial-card pattern-b" data-category="dsa" data-tags="algorithms data-structures competitive-programming leetcode c++ dynamic-programming graphs">
+        
+        <!-- Left Column: Visual Preview with Offset Paper Shadow Layer -->
+        <div class="card-column-visual">
+          <div class="visual-offset-backdrop"></div>
+          <div class="visual-card-frame">
+            <div class="mock-terminal">
+              <div class="terminal-bar">
+                <span class="t-dot t-red"></span>
+                <span class="t-dot t-yellow"></span>
+                <span class="t-dot t-green"></span>
+                <span class="t-title">dsa_mastery.cpp</span>
+              </div>
+              <pre class="terminal-code"><code><span class="c">// Algorithmic Stats & Track Record</span>
+<span class="k">struct</span> <span class="t">LeetCodeRecord</span> {
+  <span class="t">int</span> total_solved = <span class="n">400</span>;
+  <span class="t">int</span> published_solutions = <span class="n">50</span>;
+  <span class="t">vector</span>&lt;<span class="t">string</span>&gt; topics = {
+    <span class="s">"Dynamic Programming"</span>,
+    <span class="s">"Graph Traversal (BFS/DFS)"</span>,
+    <span class="s">"Binary Search Trees"</span>,
+    <span class="s">"Segment Trees & Heaps"</span>
+  };
+};</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Content -->
+        <div class="card-column-content">
+          <div class="card-entry-number">04 / ALGORITHMIC RIGOR</div>
+
+          <h2 class="card-hollow-title">
+            <a href="https://leetcode.com/u/shahkshitiz9865" target="_blank" rel="noopener">400+ Algorithmic Problem Solutions & DSA Mastery</a>
+          </h2>
+
+          <p class="card-excerpt">
+            Consistent algorithmic problem solving across LeetCode, HackerRank, and TakeUForward covering advanced data structures, computational geometry, and algorithmic optimization.
+          </p>
+
+          <p class="card-details">
+            Author of 50+ published solutions detailing time-space complexity tradeoffs, dynamic programming state transitions, and graph optimizations in C++ and Java.
+          </p>
+
+          <!-- Standardized Bottom Metadata Row -->
+          <div class="card-meta-row">
+            <div class="meta-date">
+              <i class="fa-regular fa-calendar"></i>
+              <time datetime="2026-08-30">Active Daily</time>
+            </div>
+            <div class="meta-tags">
+              <i class="fa-solid fa-tag"></i>
+              <span class="tag-label">algorithms, data-structures, leetcode, competitive-programming, c++</span>
+            </div>
+          </div>
+
+          <div class="card-action-links">
+            <a href="https://leetcode.com/u/shahkshitiz9865" target="_blank" rel="noopener" class="card-action-btn">
+              <i class="fa-solid fa-code"></i> LeetCode Profile ↗
+            </a>
+          </div>
+        </div>
+
+      </article>
+
+
+      <!-- ==========================================
+           POST / CARD 5: SWANETRA Computer Vision (Text Left, Visual Right)
+           ========================================== -->
+      <article class="editorial-card pattern-a" data-category="vision ai" data-tags="computer-vision pytorch opencv deep-learning python object-detection">
+        
+        <!-- Left Column: Content -->
+        <div class="card-column-content">
+          <div class="card-entry-number">05 / COMPUTER VISION</div>
+
+          <h2 class="card-hollow-title">
+            <a href="https://github.com/kshitiz-shah/SWANETRA" target="_blank" rel="noopener">SWANETRA — Real-Time Computer Vision Intelligence</a>
+          </h2>
+
+          <p class="card-excerpt">
+            Real-time visual processing system leveraging deep neural network architectures for video stream object detection, bounding-box tracking, and visual analytics.
+          </p>
+
+          <p class="card-details">
+            Built using <strong>Python, OpenCV, and PyTorch</strong>, optimizing frame inference pipelines for low-latency visual analysis and robust spatial tracking across varying lighting environments.
+          </p>
+
+          <!-- Standardized Bottom Metadata Row -->
+          <div class="card-meta-row">
+            <div class="meta-date">
+              <i class="fa-regular fa-calendar"></i>
+              <time datetime="2025-10-15">October 2025</time>
+            </div>
+            <div class="meta-tags">
+              <i class="fa-solid fa-tag"></i>
+              <span class="tag-label">computer-vision, pytorch, deep-learning, opencv, python</span>
+            </div>
+          </div>
+
+          <div class="card-action-links">
+            <a href="https://github.com/kshitiz-shah/SWANETRA" target="_blank" rel="noopener" class="card-action-btn">
+              <i class="fa-brands fa-github"></i> Source Code ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Visual Preview with Offset Paper Shadow Layer -->
+        <div class="card-column-visual">
+          <div class="visual-offset-backdrop"></div>
+          <div class="visual-card-frame">
+            <div class="mock-terminal">
+              <div class="terminal-bar">
+                <span class="t-dot t-red"></span>
+                <span class="t-dot t-yellow"></span>
+                <span class="t-dot t-green"></span>
+                <span class="t-title">vision_inference.py</span>
+              </div>
+              <pre class="terminal-code"><code><span class="k">import</span> cv2
+<span class="k">import</span> torch
+
+<span class="c"># Real-time Stream Inference Pipeline</span>
+model = torch.hub.load(<span class="s">'ultralytics/yolov5'</span>, <span class="s">'custom'</span>)
+cap = cv2.VideoCapture(<span class="n">0</span>)
+
+<span class="k">while</span> cap.isOpened():
+    ret, frame = cap.read()
+    results = model(frame)
+    annotated = results.render()[<span class="n">0</span>]
+    cv2.imshow(<span class="s">'SWANETRA Stream'</span>, annotated)</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </article>
+
+
+      <!-- ==========================================
+           POST / CARD 6: Repowise (Visual Left, Text Right)
+           ========================================== -->
+      <article class="editorial-card pattern-b" data-category="fullstack" data-tags="developer-tools typescript react github-api analytics data-viz">
+        
+        <!-- Left Column: Visual Preview with Offset Paper Shadow Layer -->
+        <div class="card-column-visual">
+          <div class="visual-offset-backdrop"></div>
+          <div class="visual-card-frame">
+            <div class="mock-terminal">
+              <div class="terminal-bar">
+                <span class="t-dot t-red"></span>
+                <span class="t-dot t-yellow"></span>
+                <span class="t-dot t-green"></span>
+                <span class="t-title">repowise_analytics.ts</span>
+              </div>
+              <pre class="terminal-code"><code><span class="c">// Git Health & PR Velocity Metrics</span>
+<span class="k">export async function</span> <span class="t">calcVelocity</span>(owner, repo) {
+  <span class="k">const</span> pulls = <span class="k">await</span> octokit.rest.pulls.list({ owner, repo });
+  <span class="k">const</span> leadTimeHours = pulls.data.map(p =&gt; 
+    (new Date(p.merged_at) - new Date(p.created_at)) / <span class="n">3.6e6</span>
+  );
+  <span class="k">return</span> { avgCycleTime: mean(leadTimeHours) };
+}</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Content -->
+        <div class="card-column-content">
+          <div class="card-entry-number">06 / DEVELOPER TOOLING</div>
+
+          <h2 class="card-hollow-title">
+            <a href="https://github.com/kshitiz-shah/Repowise" target="_blank" rel="noopener">Repowise — Git Repository Health & PR Analytics</a>
+          </h2>
+
+          <p class="card-excerpt">
+            Developer telemetry dashboard extracting Git commit velocity, pull request cycle times, and contributor metrics using GitHub REST API.
+          </p>
+
+          <p class="card-details">
+            Equipped with interactive charts, branch health diagnostics, and commit heatmaps built with React, TypeScript, and TailwindCSS.
+          </p>
+
+          <!-- Standardized Bottom Metadata Row -->
+          <div class="card-meta-row">
+            <div class="meta-date">
+              <i class="fa-regular fa-calendar"></i>
+              <time datetime="2025-11-28">November 2025</time>
+            </div>
+            <div class="meta-tags">
+              <i class="fa-solid fa-tag"></i>
+              <span class="tag-label">developer-tools, react, typescript, github-api, analytics</span>
+            </div>
+          </div>
+
+          <div class="card-action-links">
+            <a href="https://github.com/kshitiz-shah/Repowise" target="_blank" rel="noopener" class="card-action-btn">
+              <i class="fa-brands fa-github"></i> Source Code ↗
+            </a>
+          </div>
+        </div>
+
+      </article>
+
+    </main>
+
+    <!-- EDITORIAL SECTION DIVIDER -->
+    <div class="editorial-divider">
+      <span class="divider-line"></span>
+      <span class="divider-glyph">❦</span>
+      <span class="divider-line"></span>
+    </div>
+
+    <!-- ABOUT & FOUNDATIONS (Editorial Column Layout) -->
+    <section id="about" class="editorial-about-section">
+      
+      <div class="about-header-wrap">
+        <span class="about-kicker">ESSAY & BACKGROUND</span>
+        <h2 class="about-title">Engineering Foundations, Education & Ethos</h2>
+      </div>
+
+      <div class="about-grid-layout">
+        
+        <!-- Left Column: Biography & Philosophy -->
+        <div class="about-bio-column">
+          <p class="bio-paragraph lead">
+            I approach software engineering as an intersection of mathematical logic, clean architectural discipline, and user-centric systems design.
+          </p>
+          <p class="bio-paragraph">
+            Currently pursuing my Bachelor of Technology in Computer Science & Engineering at <strong>Symbiosis Institute of Technology (SIT), Pune</strong> (2023–2027), I combine hands-on full-stack development with rigorous algorithmic problem solving.
+          </p>
+          <p class="bio-paragraph">
+            Whether architecting RAG vector search pipelines, optimizing sub-10ms Redis caching layers, or solving graph traversal problems, I focus on building systems that are resilient, readable, and fundamentally performant.
+          </p>
+
+          <div class="competencies-block">
+            <h3 class="comp-heading">Technical Proficiencies</h3>
+            <div class="comp-list">
+              <div class="comp-item"><strong>Languages:</strong> C++, Java, TypeScript, JavaScript (ES6+), Python, SQL</div>
+              <div class="comp-item"><strong>Frontend:</strong> React.js, TailwindCSS, HTML5/CSS3, State Management</div>
+              <div class="comp-item"><strong>Backend & AI:</strong> Node.js, Express, LangChain, REST APIs, Prisma ORM</div>
+              <div class="comp-item"><strong>Databases:</strong> PostgreSQL, MongoDB, Redis, Pinecone, Qdrant</div>
+              <div class="comp-item"><strong>Tooling & Infra:</strong> Git/GitHub, Docker, Linux/Bash, Postman, n8n</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Academic Credential & Contact Card -->
+        <div class="about-sidebar-column">
+          
+          <div class="editorial-card-frame">
+            <h3 class="sidebar-block-title">
+              <i class="fa-solid fa-graduation-cap"></i> Academic Profile
+            </h3>
+            <div class="sidebar-edu-item">
+              <div class="edu-years">2023 – 2027</div>
+              <div class="edu-name">Bachelor of Technology (B.Tech)</div>
+              <div class="edu-sub">Computer Science & Engineering</div>
+              <div class="edu-org">Symbiosis Institute of Technology, Pune</div>
+              <div class="edu-gpa">Cumulative GPA: <strong>7.25 / 10.0</strong></div>
+              <p class="edu-notes">
+                Core: Data Structures & Algorithms, Database Management Systems, Operating Systems, Computer Networks, OOP, System Design.
+              </p>
+            </div>
+          </div>
+
+          <div class="editorial-card-frame contact-frame" id="contact">
+            <h3 class="sidebar-block-title">
+              <i class="fa-regular fa-paper-plane"></i> Get in Touch
+            </h3>
+            <p class="contact-intro">Open for Software Engineering opportunities, internships, and research collaborations.</p>
+            
+            <div class="direct-contact-list">
+              <div class="direct-contact-item" id="copy-email-trigger" title="Click to copy email">
+                <i class="fa-regular fa-envelope"></i>
+                <span id="email-address">shahkshtitiz9865@gmail.com</span>
+                <span class="copy-badge" id="copy-status">copy</span>
+              </div>
+              <a href="https://linkedin.com/in/kshitij-shah-83780125a" target="_blank" rel="noopener" class="direct-contact-item">
+                <i class="fa-brands fa-linkedin-in"></i>
+                <span>linkedin.com/in/kshitij-shah-83780125a</span>
+                <i class="fa-solid fa-arrow-up-right-from-square ext-icon"></i>
+              </a>
+              <a href="https://github.com/kshitiz-shah" target="_blank" rel="noopener" class="direct-contact-item">
+                <i class="fa-brands fa-github"></i>
+                <span>github.com/kshitiz-shah</span>
+                <i class="fa-solid fa-arrow-up-right-from-square ext-icon"></i>
+              </a>
+              <a href="https://leetcode.com/u/shahkshitiz9865" target="_blank" rel="noopener" class="direct-contact-item">
+                <i class="fa-solid fa-code"></i>
+                <span>leetcode.com/u/shahkshitiz9865</span>
+                <i class="fa-solid fa-arrow-up-right-from-square ext-icon"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+  <!-- FLOATING SCROLL PERCENTAGE & BACK-TO-TOP BUTTON (Steve Hoang Hallmark) -->
+  <button id="back-to-top-btn" class="floating-scroll-widget" aria-label="Scroll back to top" title="Scroll to top">
+    <span id="scroll-percentage" class="scroll-num">0%</span>
+    <span class="scroll-chevron">↑</span>
+  </button>
+
+  <!-- EDITORIAL FOOTER (Steve Hoang Style) -->
+  <footer class="editorial-footer">
+    <div class="footer-container">
+      <p class="footer-copy">
+        © 2026 <a href="#hero" class="footer-name-link">Kshitij Shah</a>. I engineer software for curiosity, scale, and algorithmic beauty.
+      </p>
+      <p class="footer-license">
+        All projects & solutions licensed under MIT / Creative Commons Attribution 4.0 International.
+      </p>
+      <div class="footer-nav-links">
+        <a href="https://github.com/kshitiz-shah" target="_blank" rel="noopener">GitHub</a>
+        <span class="f-sep">•</span>
+        <a href="https://linkedin.com/in/kshitij-shah-83780125a" target="_blank" rel="noopener">LinkedIn</a>
+        <span class="f-sep">•</span>
+        <a href="https://leetcode.com/u/shahkshitiz9865" target="_blank" rel="noopener">LeetCode</a>
+        <span class="f-sep">•</span>
+        <a href="#hero">Top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>

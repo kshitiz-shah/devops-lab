@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: social-media-app
+  labels:
+    app: social-media-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: social-media-app
+  template:
+    metadata:
+      labels:
+        app: social-media-app
+    spec:
+      containers:
+      - name: social-media-app
+        # We use a standard k8s test image that is designed to consume CPU when requested
+        image: registry.k8s.io/hpa-example
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: 200m
+          limits:
+            cpu: 500m
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: social-media-service
+spec:
+  ports:
+  - port: 80
+  selector:
+    app: social-media-app

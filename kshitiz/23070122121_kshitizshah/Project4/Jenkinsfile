@@ -1,0 +1,46 @@
+pipeline {
+    agent none // Do not specify a global agent, we will assign agents per stage
+
+    stages {
+        stage('Compile') {
+            agent { 
+                label 'node-1' // This stage will run on the Jenkins node labeled 'node-1'
+            }
+            steps {
+                echo "Running Compile stage on node: ${env.NODE_NAME}"
+                
+                // Navigate to the correct directory since code is in Project4/Project4
+                dir('Project4') {
+                    // Assuming Windows agents, we use 'bat'. For Linux, use 'sh'.
+                    bat 'mvn clean compile'
+                    
+                    // Stash the workspace (source code and compiled classes)
+                    stash name: 'compiled-workspace', includes: '**/*'
+                }
+            }
+        }
+
+        stage('Test') {
+            agent { 
+                label 'node-2' // This stage will run on the Jenkins node labeled 'node-2'
+            }
+            steps {
+                echo "Running Test stage on node: ${env.NODE_NAME}"
+                
+                // Clean the workspace on node-2 to ensure we start fresh
+                deleteDir()
+                
+                dir('Project4') {
+                    // Restore the workspace from the compile stage
+                    unstash 'compiled-workspace'
+                    
+                    // Run the tests
+                    bat 'mvn test'
+                    
+                    // Record test results
+                    junit 'target/surefire-reports/*.xml'
+                }
+            }
+        }
+    }
+}
